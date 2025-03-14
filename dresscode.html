@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress Code</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .dress-code-section {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .image-pair {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .image-wrapper {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .dress-image {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            border-radius: 5px;
+        }
+
+        .next-button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background-color: #e6e6fa;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .next-button:hover {
+            background-color: #d8bfd8;
+        }
+
+        @media (max-width: 768px) {
+            .image-pair {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>This is the dress code 👗</h1>
+    
+    <div class="dress-code-section">
+        <h2>Outfit (whoaaaa who's this pretty girl i used for inspiration 😊)</h2>
+        <div class="image-container">
+            <div class="image-pair">
+                <div class="image-wrapper">
+                    <!-- Add your first image here -->
+                    <img src="IMG_6369.jpg" alt="Outfit 1" class="dress-image">
+                </div>
+                <div class="image-wrapper">
+                    <!-- Add your second image here -->
+                    <img src="IMG_6384.jpg" alt="Outfit 2" class="dress-image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="next-button" onclick="window.location.href='location.html'">
+        Ok, next...
+    </button>
+</body>
+</html>

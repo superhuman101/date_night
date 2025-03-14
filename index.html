@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Go Out With Me?</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+            padding: 0 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        #yesBtn {
+            background-color: #98ff98; /* Mint green */
+            width: 100px;
+            height: 100px;
+            font-size: 16px;
+        }
+
+        #noBtn {
+            background-color: #ff6961; /* Light red */
+            width: 100px;
+            height: 100px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you go out on a date with me on Wednesday, March 19th (alternative date: Saturday, March 22nd)?</h1>
+    <div class="buttons">
+        <button id="yesBtn">YES</button>
+        <button id="noBtn">NO</button>
+    </div>
+
+    <script>
+        let yesSize = 100;
+        let noSize = 100;
+        let yesFont = 16;
+        let noFont = 16;
+
+        const yesBtn = document.getElementById('yesBtn');
+        const noBtn = document.getElementById('noBtn');
+
+        noBtn.addEventListener('click', function() {
+            // Increase YES button size and font
+            yesSize *= 1.2;
+            yesFont *= 1.2;
+            yesBtn.style.width = yesSize + 'px';
+            yesBtn.style.height = yesSize + 'px';
+            yesBtn.style.fontSize = yesFont + 'px';
+
+            // Decrease NO button size and font
+            noSize *= 0.8;
+            noFont *= 0.8;
+            noBtn.style.width = noSize + 'px';
+            noBtn.style.height = noSize + 'px';
+            noBtn.style.fontSize = noFont + 'px';
+
+            // Adjust container spacing
+            document.querySelector('.buttons').style.gap = (20 * (noSize/100)) + 'px';
+        });
+
+        yesBtn.addEventListener('click', function() {
+            // Show the alert first
+            alert("YIPEEEEEE! 😊 You better not have clicked NO, that would have made me really sad ☹️");
+            
+            // After alert is closed, redirect to dresscode.html
+            window.location.href = 'dresscode.html';
+        });
+    </script>
+</body>
+</html>
